@@ -1,0 +1,25 @@
+import java.util.Scanner;
+class task
+{
+static int prf(String s,int a,int b)
+{
+if(s=="mul")
+{
+return a*b;
+ 
+}
+else
+{ 
+return a+b;
+ 
+}
+}
+}
+class perform
+{
+    public static void main(String[] args)  
+    { 
+        System.out.println(task.prf("mul",11,11));
+        System.out.println(task.prf("sum",11,11));
+    }
+}
