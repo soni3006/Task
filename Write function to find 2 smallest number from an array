@@ -1,0 +1,27 @@
+import java.util.Scanner;
+class small
+{
+    public static void main(String[] args)  
+    { 
+        Scanner sr = new Scanner(System.in);
+        int n = sr.nextInt();
+        int arr[] = new int[n];
+        for(int i=0;i<n;i++)
+        {
+            arr[i] = sr.nextInt();
+        }
+        int nsmall=10000000;
+        int small=arr[0];
+        for(int i=1;i<n;i++)
+        {
+          if(arr[i] < small)
+          {
+            nsmall = small;
+            small = arr[i];  
+          }      
+          else if(arr[i] < nsmall && arr[i] > small)
+            nsmall = arr[i];
+        }
+        System.out.println("Smallest and the second smallest numbers are respectively "+small+ " and "+nsmall);
+    }
+}
